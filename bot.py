@@ -1,4 +1,4 @@
-import telebot 
+import telebot
 from bot_logic import gen_pass, d4
 
 
@@ -16,6 +16,30 @@ def send_pass(message):
 @bot.message_handler(commands=['d4'])
 def send_pass(message):
     bot.reply_to(message, d4())
+
+@bot.message_handler(commands=['d6'])
+def send_pass(message):
+    bot.reply_to(message, d6())
+
+@bot.message_handler(commands=['d8'])
+def send_pass(message):
+    bot.reply_to(message, d8())
+
+@bot.message_handler(commands=['d10'])
+def send_pass(message):
+    bot.reply_to(message, d10())
+
+@bot.message_handler(commands=['d12'])
+def send_pass(message):
+    bot.reply_to(message, d12())
+
+@bot.message_handler(commands=['d20'])
+def send_pass(message):
+    bot.reply_to(message, d20())
+
+@bot.message_handler(commands=['d100'])
+def send_pass(message):
+    bot.reply_to(message, d100())
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
